@@ -1,0 +1,31 @@
+header .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+header .navigation .left__nav {
+    flex: 0 0 20%;
+}
+header .navigation .left__nav a .logo {
+    width: 150px;
+}
+header .navigation .right__nav {
+    flex: 0 0 80%;
+}
+header .navigation .right__nav ul {
+    display: flex;
+    justify-content: end;
+    font-weight: 500;
+}
+header .navigation .right__nav ul li {
+    margin-right: 1rem;
+}
+header .navigation .right__nav ul li:last-child {
+    margin-right: 0;
+}
+header .navigation .right__nav ul li a {
+    color: var(--heading-color);
+}

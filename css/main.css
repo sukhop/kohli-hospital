@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Utilities starts */
+:root {
+    --main-bg: #D8E3E7;
+    --link-color: #51C4D3;
+    --link-hover: #126E82;
+    --heading-color: #132C33;
+}
+a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+p {
+    margin: 0;
+    color: var(--heading-color);
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/* Utilities ends */
