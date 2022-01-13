@@ -8,6 +8,7 @@ html,
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 /* Utilities starts */
@@ -17,18 +18,227 @@ body {
     --link-hover: #126E82;
     --heading-color: #132C33;
 }
+
 a {
     text-decoration: none;
     color: #000;
     cursor: pointer;
 }
+
 p {
     margin: 0;
     color: var(--heading-color);
 }
+
 ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
+
 /* Utilities ends */
+/* index styling starts */
+.services__block {
+    /* margin-top: -10rem; */
+    background-color: #fff;
+}
+.services_card-top {
+    padding: 3rem 0;
+    box-shadow: 0px 0px 20px #000;
+}
+
+.services_card-top .col-lg-3 {
+    text-align: center;
+}
+
+.services_card-top .col-lg-3 img {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.services_card-top .col-lg-3 p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.services_bg {
+    padding: 5rem 0;
+    background-image: url('../images/chiropractor-01.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.doctors .container .col img,
+.services_bg .container .col img {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    box-shadow: 0px 0px 20px var(--heading-color);
+}
+
+.doctors .container .col p,
+.services_bg .container .col p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0em 0.1em 0.1em rgba(0, 0, 0, 0.4);
+}
+.footer,
+.testimonials,
+.services__block,
+.achievement_section,
+.specilty__clinic {
+    padding: 5rem 0;
+}
+
+.slider__heading,
+.specilty__clinic .section__heading {
+    font-size: 2rem;
+    color: var(--heading-color);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.specilty__clinic .specilty__cards {
+    margin-top: 3rem;
+}
+
+.specilty__clinic .specilty__cards img {
+    width: 150px;
+    margin-bottom: 1rem;
+}
+
+.specilty__clinic .specilty__cards h4 {
+    font-weight: bold;
+}
+
+.doctors {
+    background-color: var(--link-hover);
+    padding: 5rem 0;
+}
+
+.doctors .container .section__heading {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--main-bg);
+}
+.carousel-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--link-hover);
+    height: 416px;
+    width: 100%;
+    padding: 5rem;
+    border-radius: 50px;
+}
+.section__heading {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.slider-btn {
+    position: relative;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--main-bg);
+    font-weight: bold;
+    color: var(--main-bg);
+    transition: all 0.3s ease-in-out;
+}
+.slider-btn .bi-chevron-right {
+    position: absolute;
+    right: 50%;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+.slider-btn:hover {
+    background-color: var(--link-color);
+    color: var(--main-bg);
+    border: 2px solid var(--link-color);
+    padding-right: 35px;
+}
+.slider-btn:hover .bi-chevron-right {
+    right: 10px;
+    opacity: 1;
+}
+.testimonials {
+    background-image: linear-gradient(142deg,#2b87da 50%,#e09900 50%) !important;
+    background-size: cover;
+    background-position: center;
+}
+.testimonials .container .single-item div video {
+    height: 350px;
+}
+.testimonials .testimonial_grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 40px;
+    row-gap: 40px;
+}
+.testimonials .container .testimonial__comments {
+    position: relative;
+    padding: 3rem 2rem;
+    background-color: #fff;
+}
+.testimonials .container .testimonial__comments .patient_name {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+.comment_icon {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 50%;
+    border: 3px solid var(--heading-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+.comment_icon .bi-quote {
+    transform: rotate(180deg);
+    font-size: 1.2rem;
+}
+.testimonials .slider-btn {
+    margin-top: 40px;
+    border: 2px solid #2b87da;
+    color: #fff;
+    background-color: #2b87da;
+}
+/* index styling ends */
+/* footer styling starts here */
+.footer {
+    background-color: #2b87da;
+}
+.footer .footer__grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 1rem;
+}
+.footer .footer_block {
+    display: flex;
+    height: 100%;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px 0.5 #000;
+    background-color: #fff;
+}
+.footer .footer_block .footer__icon {
+    color: #2b87da;
+    font-size: 1.5rem;
+}
+.footer .footer__details .footer__heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/* footer styling ends here */
