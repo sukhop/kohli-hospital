@@ -11,6 +11,10 @@ body {
     overflow-x: hidden;
 }
 
+body {
+    background-color: #F9F9F9;
+}
+
 /* Utilities starts */
 :root {
     --main-bg: #D8E3E7;
@@ -36,15 +40,40 @@ ul {
     list-style: none;
 }
 
+.appointment-btn {
+    position: fixed;
+    bottom: 7%;
+    right: 0;
+    transform: translateX(75%);
+    padding: 1rem 1.5rem;
+    border-radius: 10px 0 0 10px;
+    background-color: #008CFF;
+    transition: all 0.5s cubic-bezier(0, 0.42, 0.42, 0.99);
+}
+
+.appointment-btn:hover {
+    transform: translateX(0);
+}
+
+.appointment-btn a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.appointment-btn a i {
+    margin-right: 1.5rem;
+}
+
 /* Utilities ends */
 /* index styling starts */
 .services__block {
     /* margin-top: -10rem; */
     background-color: #fff;
 }
+
 .services_card-top {
     padding: 3rem 0;
-    box-shadow: 0px 0px 20px #000;
+    box-shadow: 0px 0px 20px #008CFF;
 }
 
 .services_card-top .col-lg-3 {
@@ -86,11 +115,16 @@ ul {
     color: #fff;
     text-shadow: 0em 0.1em 0.1em rgba(0, 0, 0, 0.4);
 }
+
+.services_content,
+.about_description,
+.contact,
 .footer,
 .testimonials,
 .services__block,
 .achievement_section,
-.specilty__clinic {
+.specilty__clinic,
+.form-area {
     padding: 5rem 0;
 }
 
@@ -127,6 +161,7 @@ ul {
     font-weight: bold;
     color: var(--main-bg);
 }
+
 .carousel-section {
     display: flex;
     justify-content: center;
@@ -137,11 +172,13 @@ ul {
     padding: 5rem;
     border-radius: 50px;
 }
+
 .section__heading {
     font-weight: bold;
     font-size: 2rem;
     margin-bottom: 1rem;
 }
+
 .slider-btn {
     position: relative;
     margin-top: 1rem;
@@ -151,45 +188,55 @@ ul {
     color: var(--main-bg);
     transition: all 0.3s ease-in-out;
 }
+
 .slider-btn .bi-chevron-right {
     position: absolute;
     right: 50%;
     opacity: 0;
     transition: all 0.3s ease-in-out;
 }
+
 .slider-btn:hover {
     background-color: var(--link-color);
     color: var(--main-bg);
     border: 2px solid var(--link-color);
     padding-right: 35px;
 }
+
 .slider-btn:hover .bi-chevron-right {
     right: 10px;
     opacity: 1;
 }
+
 .testimonials {
-    background-image: linear-gradient(142deg,#2b87da 50%,#e09900 50%) !important;
+    background-image: linear-gradient(142deg, #2b87da 50%, #e09900 50%) !important;
     background-size: cover;
     background-position: center;
 }
+
 .testimonials .container .single-item div video {
     height: 350px;
+    cursor: pointer;
 }
+
 .testimonials .testimonial_grid {
     display: grid;
     grid-template-columns: auto auto;
     gap: 40px;
     row-gap: 40px;
 }
+
 .testimonials .container .testimonial__comments {
     position: relative;
     padding: 3rem 2rem;
     background-color: #fff;
 }
+
 .testimonials .container .testimonial__comments .patient_name {
     margin-top: 1rem;
     font-weight: bold;
 }
+
 .comment_icon {
     width: 35px;
     height: 35px;
@@ -204,26 +251,125 @@ ul {
     align-items: center;
     background-color: #fff;
 }
+
 .comment_icon .bi-quote {
     transform: rotate(180deg);
     font-size: 1.2rem;
 }
+
 .testimonials .slider-btn {
     margin-top: 40px;
     border: 2px solid #2b87da;
     color: #fff;
     background-color: #2b87da;
 }
+
 /* index styling ends */
+/* why kohli page styling starts */
+.section_background {
+    background-color: #025EC1;
+    padding: 4rem 0;
+}
+
+.section_background h3 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.about_description p,
+.services p {
+    line-height: 2;
+}
+
+.mission,
+.vision {
+    margin-top: 2rem;
+}
+
+.opd_facility h3,
+.services h3 {
+    line-height: 1;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* why kohli page styling ends */
+/* services page styling starts */
+.services_section_heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.services_section_heading p {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #008CFF;
+    letter-spacing: 0.2rem;
+}
+
+.services_section_heading h2 {
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.services_cards {
+    margin-bottom: 3rem;
+}
+
+.services_cards .outer_body {
+    padding: 2rem;
+    height: 100%;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: all 0.3s ease;
+}
+
+.services_cards .outer_body:hover {
+    transform: translateY(-5px);
+}
+
+.services_cards .outer_body .card_body_image {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #FDEEE7;
+}
+
+.services_cards .outer_body .card_body_image img {
+    width: 65px;
+    height: 65px;
+    transition: all 0.5s ease;
+}
+
+.services_cards .outer_body:hover .card_body_image img {
+    transform: rotateY(360deg);
+}
+
+.services_cards .outer_body .card_body_text p:nth-child(1) {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* services page styling ends */
 /* footer styling starts here */
 .footer {
     background-color: #2b87da;
 }
+
 .footer .footer__grid {
     display: grid;
     grid-template-columns: auto auto auto auto;
     gap: 1rem;
 }
+
 .footer .footer_block {
     display: flex;
     height: 100%;
@@ -233,12 +379,115 @@ ul {
     box-shadow: 0px 0px 10px 0.5 #000;
     background-color: #fff;
 }
+
 .footer .footer_block .footer__icon {
     color: #2b87da;
     font-size: 1.5rem;
 }
+
 .footer .footer__details .footer__heading {
     font-size: 1.5rem;
     font-weight: bold;
 }
+
 /* footer styling ends here */
+/* Contact Page styling starts */
+.contact .container .contact_heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.contact .container .contact_block {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.contact .container .contact_block .icon_box {
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-right: 1rem;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    background-color: #008CFF;
+}
+
+.contact .container .contact_block .content_box p {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #8f8f8f;
+    letter-spacing: 0.2rem;
+}
+
+.contact .container .contact_block .content_box a {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.btn-form {
+    color: #fff;
+    background-color: #008CFF;
+    padding: 1rem 2rem;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.btn-form:hover {
+    color: #fff;
+    background-color: #007add;
+}
+
+.contact .container .contact_form_bg {
+    background-image: linear-gradient(180deg, rgba(24, 40, 69, 0.85) 0%, #182845 100%), url(../images/eye-doctor-05.jpg);
+    color: #fff;
+    padding: 5rem 3rem;
+}
+
+.contact .container .contact_form_bg input {
+    margin-bottom: 1.3rem;
+}
+
+/* Contact Page styling ends */
+/* Book appointment page styling starts */
+.form_background {
+    margin-top: 1rem;
+    padding: 3rem 2rem;
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.form_background .form-label {
+    color: #666666;
+    font-size: 1.1rem;
+}
+
+.form_background .theme_form {
+    height: 50px;
+    display: block;
+    margin-bottom: 0.7rem;
+    padding: 10px 20px;
+    width: 100%;
+    outline: none;
+    border-radius: 0;
+    color: #666666;
+    border: 1px solid #EBEBEB;
+    transition: all 0.3s ease;
+}
+
+.form_background .theme_form:focus {
+    border: 1px solid #025EC1;
+}
+
+.form_background select .option {
+    border-radius: 0;
+}
+
+.form_background textarea.theme_form {
+    height: 110px;
+}
+
+/* Book appointment page styling ends */
